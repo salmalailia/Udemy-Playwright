@@ -1,5 +1,6 @@
 import {test, expect} from '@playwright/test';
 import HomePage from '../pages/home.page';
+import homePage from '../pages/home.page';
 
 test.describe('Home', () => {
     let homePage: HomePage;
@@ -90,7 +91,7 @@ test.describe('Home', () => {
 
         // Find Search Xpath locator
         //const SearchIcon = await page.locator(`//div[contains(@class,"zak-header-actions zak-header-actions--desktop")]//a[contains(@class,"zak-header-search__toggle")]`)
-        const SearchIcon = await homePage.searchIcon;
+        const SearchIcon = homePage.searchIcon;
 
         // Verify Home Text is Visible
         await expect(SearchIcon).toBeVisible();
